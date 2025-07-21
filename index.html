@@ -14,16 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Menggunakan font Inter untuk tampilan yang lebih bersih dan modern */
         body { 
             font-family: 'Inter', sans-serif; 
-            background-color: #020617; /* Warna Latar Belakang: Biru Sangat Gelap (Slate 950) */
-            color: #cbd5e1; /* Warna Teks Default: Slate 300 */
+            background-color: #020617;
+            color: #cbd5e1;
         }
-        /* Mengubah warna scrollbar agar sesuai tema */
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0f172a; } /* Slate 900 */
-        ::-webkit-scrollbar-thumb { background: #1e40af; border-radius: 10px; } /* Blue 800 */
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #1e40af; border-radius: 10px; }
         pre { white-space: pre-wrap; word-wrap: break-word; font-family: 'Inter', sans-serif; }
     </style>
 </head>
@@ -35,16 +33,16 @@
             <div class="flex items-center justify-between h-16">
                 <a href="#" class="text-xl font-bold text-white">Soeltan<span class="text-blue-500">Medsos</span></a>
                 
-                <!-- Menu Desktop -->
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#cara-order" class="text-sm font-medium text-slate-300 hover:text-blue-500 transition-colors">Cara Order</a>
-                    <a href="#harga" class="text-sm font-medium text-slate-300 hover:text-blue-500 transition-colors">Layanan</a>
-                    <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-blue-500 transition-colors">FAQ</a>
-                </div>
-
                 <div class="flex items-center">
+                    <!-- Menu Desktop (Sekarang di Kanan) -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#cara-order" class="text-sm font-medium text-slate-300 hover:text-blue-500 transition-colors">Cara Order</a>
+                        <a href="#harga" class="text-sm font-medium text-slate-300 hover:text-blue-500 transition-colors">Layanan</a>
+                        <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-blue-500 transition-colors">FAQ</a>
+                    </div>
+
                     <!-- Tombol Keranjang -->
-                    <button onclick="showCartModal()" class="relative text-white p-2 rounded-full hover:bg-slate-800 transition-colors">
+                    <button onclick="showCartModal()" class="relative text-white p-2 rounded-full hover:bg-slate-800 transition-colors ml-4">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                         <span id="cart-count" class="absolute -top-1 -right-1 bg-blue-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
                     </button>
@@ -79,7 +77,6 @@
         <section id="cara-order" class="my-16 md:my-24 max-w-4xl mx-auto bg-slate-900 p-6 sm:p-8 rounded-xl border border-slate-800">
             <h2 class="text-2xl font-bold text-center mb-6 text-blue-500">Cara Order & Pembayaran</h2>
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Kolom Kiri: Langkah-langkah -->
                 <div>
                     <h3 class="font-semibold text-lg mb-4 text-white">Langkah Pemesanan:</h3>
                     <ol class="list-decimal list-inside space-y-3 text-slate-400 text-sm">
@@ -91,7 +88,6 @@
                         <li>Salin format di sebelah, isi datanya, lalu kirim ke WhatsApp admin beserta bukti pembayaran.</li>
                     </ol>
                 </div>
-                <!-- Kolom Kanan: Format Pesanan & Pembayaran -->
                 <div>
                     <h3 class="font-semibold text-lg mb-4 text-white">Format Pesanan WhatsApp:</h3>
                     <div class="bg-slate-800 p-4 rounded-lg relative">
@@ -104,7 +100,6 @@ Order       : (Sebutkan pesanan Anda)
 Harap lampirkan Screenshot bukti pembayaran.
                         </pre>
                     </div>
-
                     <h3 class="font-semibold text-lg mt-6 mb-4 text-white">Metode Pembayaran:</h3>
                     <pre class="bg-slate-800 p-4 rounded-lg text-sm text-slate-300">
 Dana  : 085942068379 /Didik Fajar
@@ -125,236 +120,232 @@ BRI   : 0149 0108 0052 508 /Didik Fajar
         <section id="harga" class="my-16 md:my-24">
             <h2 class="text-3xl font-bold text-center mb-12 text-white">Daftar Layanan</h2>
             
-            <!-- LAYANAN TIKTOK (LENGKAP) -->
+            <!-- LAYANAN TIKTOK (HARGA BARU) -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-6 text-blue-500">Layanan TikTok</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Share</h4><p class="text-xs text-slate-400 mb-3">(MAX 100K) (Refil 30 Days)</p><p class="text-xl font-bold text-blue-500">Rp 2.500 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Share', 2500)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Share</h4><p class="text-xs text-slate-400 mb-3">(MAX 100K) (Refil 30 Days)</p><p class="text-xl font-bold text-blue-500">Rp 300 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Share', 300)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Share (Non Drop)</h4><p class="text-xs text-slate-400 mb-3">(MAX 100K) (Refil 30 Days)</p><p class="text-xl font-bold text-blue-500">Rp 3.500 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Share (Non Drop)', 3500)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Share (Non Drop)</h4><p class="text-xs text-slate-400 mb-3">(MAX 100K) (Refil 30 Days)</p><p class="text-xl font-bold text-blue-500">Rp 400 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Share (Non Drop)', 400)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Share (INSTAN)</h4><p class="text-xs text-slate-400 mb-3">(MAX 100K) (Refil 30 Days) (Non Drop)</p><p class="text-xl font-bold text-blue-500">Rp 35.500 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Share (INSTAN)', 35500)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Share (INSTAN)</h4><p class="text-xs text-slate-400 mb-3">(MAX 100K) (Refil 30 Days) (Non Drop)</p><p class="text-xl font-bold text-blue-500">Rp 3.600 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Share (INSTAN)', 3600)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Coment Like</h4><p class="text-xs text-slate-400 mb-3">(MAX 100K) (Refil 30 Days) (Super Fast)</p><p class="text-xl font-bold text-blue-500">Rp 6.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Coment Like', 6000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Coment Like</h4><p class="text-xs text-slate-400 mb-3">(MAX 100K) (Refil 30 Days) (Super Fast)</p><p class="text-xl font-bold text-blue-500">Rp 600 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Coment Like', 600)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Rondom Coment</h4><p class="text-xs text-slate-400 mb-3">(Start Time 1-4 Hour)</p><p class="text-xl font-bold text-blue-500">Rp 25.500 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Rondom Coment', 25500)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Rondom Coment</h4><p class="text-xs text-slate-400 mb-3">(Start Time 1-4 Hour)</p><p class="text-xl font-bold text-blue-500">Rp 2.600 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Rondom Coment', 2600)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Costume Coment</h4><p class="text-xs text-slate-400 mb-3">Komentar sesuai keinginan</p><p class="text-xl font-bold text-blue-500">Rp 40.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Costume Coment', 40000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Costume Coment</h4><p class="text-xs text-slate-400 mb-3"></p><p class="text-xl font-bold text-blue-500">Rp 4.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Costume Coment', 4000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Costume Coment Indoneisa</h4><p class="text-xs text-slate-400 mb-3">Komentar dari akun Indonesia</p><p class="text-xl font-bold text-blue-500">Rp 380.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Costume Coment Indonesia', 380000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Costume Coment Indoneisa</h4><p class="text-xs text-slate-400 mb-3"></p><p class="text-xl font-bold text-blue-500">Rp 38.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Costume Coment Indonesia', 38000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Folowers Bot (Slow)</h4><p class="text-xs text-slate-400 mb-3">(MAX 200K) (30 Days Refil)</p><p class="text-xl font-bold text-blue-500">Rp 55.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Folowers Bot (Slow)', 55000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Folowers Bot (Slow)</h4><p class="text-xs text-slate-400 mb-3">(MAX 200K) (30 Days Refil)</p><p class="text-xl font-bold text-blue-500">Rp 5.500 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Folowers Bot (Slow)', 5500)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Folowers Real Accounts (HQ)</h4><p class="text-xs text-slate-400 mb-3">(MAX 300K) (30 Days Refil)</p><p class="text-xl font-bold text-blue-500">Rp 60.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Folowers Real Accounts (HQ)', 60000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Folowers Real Accounts (HQ)</h4><p class="text-xs text-slate-400 mb-3">(MAX 300K) (30 Days Refil)</p><p class="text-xl font-bold text-blue-500">Rp 6.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Folowers Real Accounts (HQ)', 6000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Folowers HQ Accounts (Real - Fast)</h4><p class="text-xs text-slate-400 mb-3">(MAX 300K) (30 Days Refil)</p><p class="text-xl font-bold text-blue-500">Rp 70.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Folowers HQ (Real - Fast)', 70000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Folowers HQ Accounts (Real - Fast)</h4><p class="text-xs text-slate-400 mb-3">(MAX 300K) (30 Days Refil)</p><p class="text-xl font-bold text-blue-500">Rp 7.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Folowers HQ (Real - Fast)', 7000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Followers Indonesia Bonus++</h4><p class="text-xs text-slate-400 mb-3">(30 Days Refil) (500/day) (MAX 5K)</p><p class="text-xl font-bold text-blue-500">Rp 98.500 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Followers Indonesia Bonus++', 98500)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Followers Indonesia Bonus++</h4><p class="text-xs text-slate-400 mb-3">(30 Days Refil) (500/day) (MAX 5K)</p><p class="text-xl font-bold text-blue-500">Rp 9.900 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Followers Indonesia Bonus++', 9900)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Like Indonesia (HQ)</h4><p class="text-xs text-slate-400 mb-3">(15k/Days) (No Refil)</p><p class="text-xl font-bold text-blue-500">Rp 20.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Like Indonesia (HQ)', 20000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Like Indonesia (HQ)</h4><p class="text-xs text-slate-400 mb-3">(15k/Days) (No Refil)</p><p class="text-xl font-bold text-blue-500">Rp 2.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Like Indonesia (HQ)', 2000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Like (SuperInstan)</h4><p class="text-xs text-slate-400 mb-3">(30 Days Refil)</p><p class="text-xl font-bold text-blue-500">Rp 1.500 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Like (SuperInstan)', 1500)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Like (SuperInstan)</h4><p class="text-xs text-slate-400 mb-3">(30 Days Refil)</p><p class="text-xl font-bold text-blue-500">Rp 200 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Like (SuperInstan)', 200)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Like (HQ & Real Profil)</h4><p class="text-xs text-slate-400 mb-3">(30 Days Refil) (SuperInstan)</p><p class="text-xl font-bold text-blue-500">Rp 3.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Like (HQ & Real Profil)', 3000)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Like (HQ & Real Profil)</h4><p class="text-xs text-slate-400 mb-3">(30 Days Refil) (SuperInstan)</p><p class="text-xl font-bold text-blue-500">Rp 300 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Like (HQ & Real Profil)', 300)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Story Like</h4><p class="text-xs text-slate-400 mb-3">&nbsp;</p><p class="text-xl font-bold text-blue-500">Rp 10.500 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Story Like', 10500)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Story Like</h4><p class="text-xs text-slate-400 mb-3">&nbsp;</p><p class="text-xl font-bold text-blue-500">Rp 1.100 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Story Like', 1100)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok Story View</h4><p class="text-xs text-slate-400 mb-3">&nbsp;</p><p class="text-xl font-bold text-blue-500">Rp 10.500 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok Story View', 10500)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok Story View</h4><p class="text-xs text-slate-400 mb-3">&nbsp;</p><p class="text-xl font-bold text-blue-500">Rp 1.100 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok Story View', 1100)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Tiktok View (FAST)</h4><p class="text-xs text-slate-400 mb-3">(Instan Start) (Non Drop) (Unlimited)</p><p class="text-xl font-bold text-blue-500">Rp 100 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Tiktok View (FAST)', 100)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Tiktok View (FAST)</h4><p class="text-xs text-slate-400 mb-3">(Instan Start) (Non Drop) (Unlimited)</p><p class="text-xl font-bold text-blue-500">Rp 10 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Tiktok View (FAST)', 10)" class="w-full text-center mt-4 bg-slate-800 text-blue-400 font-semibold py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                 </div>
             </div>
             
-            <!-- LAYANAN INSTAGRAM (LENGKAP) -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-6 text-pink-500">Layanan Instagram</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Channel Member</h4><p class="text-xs text-slate-400 mb-3">(Global) (MAX 1M) (HQ Real) (Instan) (No Refil)</p><p class="text-xl font-bold text-pink-500">Rp 18.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Channel Member', 18000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Channel Member</h4><p class="text-xs text-slate-400 mb-3">(Global) (MAX 1M) (HQ Real) (Instan) (No Refil)</p><p class="text-xl font-bold text-pink-500">Rp 1.800 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Channel Member', 1800)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Channel Member (Refil)</h4><p class="text-xs text-slate-400 mb-3">(Global) (MAX 1M) (HQ Real) (Instan) (90 Days Refil)</p><p class="text-xl font-bold text-pink-500">Rp 25.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Channel Member (Refil)', 25000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Channel Member (Refil)</h4><p class="text-xs text-slate-400 mb-3">(Global) (MAX 1M) (HQ Real) (Instan) (90 Days Refil)</p><p class="text-xl font-bold text-pink-500">Rp 2.500 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Channel Member (Refil)', 2500)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Rondom Coment</h4><p class="text-xs text-slate-400 mb-3">(From Accounts 10K Followers)</p><p class="text-xl font-bold text-pink-500">Rp 60.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Rondom Coment', 60000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Rondom Coment</h4><p class="text-xs text-slate-400 mb-3">(From Accounts 10K Followers)</p><p class="text-xl font-bold text-pink-500">Rp 6.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Rondom Coment', 6000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Costume Coment</h4><p class="text-xs text-slate-400 mb-3">(Instan)</p><p class="text-xl font-bold text-pink-500">Rp 100.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Costume Coment', 100000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Costume Coment</h4><p class="text-xs text-slate-400 mb-3">(Instan)</p><p class="text-xl font-bold text-pink-500">Rp 10.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Costume Coment', 10000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Costume Coment Indonesia</h4><p class="text-xs text-slate-400 mb-3">&nbsp;</p><p class="text-xl font-bold text-pink-500">Rp 330.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Costume Coment Indonesia', 330000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Costume Coment Indonesia</h4><p class="text-xs text-slate-400 mb-3"></p><p class="text-xl font-bold text-pink-500">Rp 33.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Costume Coment Indonesia', 33000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Followers Indonesia</h4><p class="text-xs text-slate-400 mb-3">(Real Aktif) (Refil 10 Days) (MAX 3K)</p><p class="text-xl font-bold text-pink-500">Rp 66.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Followers Indonesia', 66000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Followers Indonesia</h4><p class="text-xs text-slate-400 mb-3">(Real Aktif) (Refil 10 Days) (MAX 3K)</p><p class="text-xl font-bold text-pink-500">Rp 9.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Followers Indonesia', 9000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Followers Less Drop</h4><p class="text-xs text-slate-400 mb-3">(100k/Days) (Refil 30 Days)</p><p class="text-xl font-bold text-pink-500">Rp 66.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Followers Less Drop', 66000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Followers Less Drop</h4><p class="text-xs text-slate-400 mb-3">(100k/Days) (Refil 30 Days)</p><p class="text-xl font-bold text-pink-500">Rp 6.600 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Followers Less Drop', 6600)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Followers Less Drop (SuperFast)</h4><p class="text-xs text-slate-400 mb-3">(100k/Days) (Refil 30 Days)</p><p class="text-xl font-bold text-pink-500">Rp 90.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Followers Less Drop (SuperFast)', 90000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Followers Less Drop (SuperFast)</h4><p class="text-xs text-slate-400 mb-3">(100k/Days) (Refil 30 Days)</p><p class="text-xl font-bold text-pink-500">Rp 9.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Followers Less Drop (SuperFast)', 9000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Like Indonesia (Fast)</h4><p class="text-xs text-slate-400 mb-3">(Max 1k) (30 Days Refil)</p><p class="text-xl font-bold text-pink-500">Rp 15.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Like Indonesia (Fast)', 15000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Like Indonesia (Fast)</h4><p class="text-xs text-slate-400 mb-3">(Max 1k) (30 Days Refil)</p><p class="text-xl font-bold text-pink-500">Rp 1.500 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Like Indonesia (Fast)', 1500)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Like (HQ)</h4><p class="text-xs text-slate-400 mb-3">(Fast) (Max 10k) (30 Days Refil)</p><p class="text-xl font-bold text-pink-500">Rp 8.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Like (HQ)', 8000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Like (HQ)</h4><p class="text-xs text-slate-400 mb-3">(Fast) (Max 10k) (30 Days Refil)</p><p class="text-xl font-bold text-pink-500">Rp 800 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Like (HQ)', 800)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Like (LQ)</h4><p class="text-xs text-slate-400 mb-3">(Slow) (Max 10k) (30 Days Refil)</p><p class="text-xl font-bold text-pink-500">Rp 5.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Like (LQ)', 5000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Like (LQ)</h4><p class="text-xs text-slate-400 mb-3">(Slow) (Max 10k) (30 Days Refil)</p><p class="text-xl font-bold text-pink-500">Rp 500 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Like (LQ)', 500)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instaram Reels View</h4><p class="text-xs text-slate-400 mb-3">(MAX 1M)</p><p class="text-xl font-bold text-pink-500">Rp 800 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instaram Reels View', 800)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instaram Reels View</h4><p class="text-xs text-slate-400 mb-3">(MAX 1M)</p><p class="text-xl font-bold text-pink-500">Rp 80 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instaram Reels View', 80)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instaram Reels Like</h4><p class="text-xs text-slate-400 mb-3">(MAX 1M)</p><p class="text-xl font-bold text-pink-500">Rp 10.500 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instaram Reels Like', 10500)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instaram Reels Like</h4><p class="text-xs text-slate-400 mb-3">(MAX 1M)</p><p class="text-xl font-bold text-pink-500">Rp 1.100 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instaram Reels Like', 1100)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Share</h4><p class="text-xs text-slate-400 mb-3">(Speed 50k/Days)</p><p class="text-xl font-bold text-pink-500">Rp 4.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Share', 4000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Share</h4><p class="text-xs text-slate-400 mb-3">(Speed 50k/Days)</p><p class="text-xl font-bold text-pink-500">Rp 400 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Share', 400)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Story View Indonesia</h4><p class="text-xs text-slate-400 mb-3">&nbsp;</p><p class="text-xl font-bold text-pink-500">Rp 4.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Story View Indonesia', 4000)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Story View Indonesia</h4><p class="text-xs text-slate-400 mb-3"></p><p class="text-xl font-bold text-pink-500">Rp 400 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Story View Indonesia', 400)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram Story View (HQ)</h4><p class="text-xs text-slate-400 mb-3">(All Story)</p><p class="text-xl font-bold text-pink-500">Rp 3.900 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram Story View (HQ)', 3900)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram Story View (HQ)</h4><p class="text-xs text-slate-400 mb-3">(All Story)</p><p class="text-xl font-bold text-pink-500">Rp 400 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram Story View (HQ)', 400)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Instagram View</h4><p class="text-xs text-slate-400 mb-3">(All Video Link)</p><p class="text-xl font-bold text-pink-500">Rp 800 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                         <button onclick="addToCart('Instagram View', 800)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Instagram View</h4><p class="text-xs text-slate-400 mb-3">(All Video Link)</p><p class="text-xl font-bold text-pink-500">Rp 80 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                         <button onclick="addToCart('Instagram View', 80)" class="w-full text-center mt-4 bg-slate-800 text-pink-400 font-semibold py-2 rounded-lg hover:bg-pink-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                 </div>
             </div>
 
-            <!-- LAYANAN YOUTUBE (LENGKAP) -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-6 text-red-500">Layanan Youtube</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Youtube Like (No Refil)</h4><p class="text-xs text-slate-400 mb-3">(Instan Start) (Max 1M)</p><p class="text-xl font-bold text-red-500">Rp 2.500 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Youtube Like (No Refil)', 2500)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Youtube Like (No Refil)</h4><p class="text-xs text-slate-400 mb-3">(Instan Start) (Max 1M)</p><p class="text-xl font-bold text-red-500">Rp 300 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Youtube Like (No Refil)', 300)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Youtube Like (30 Days Refil)</h4><p class="text-xs text-slate-400 mb-3">(Instan Start) (Max 1M)</p><p class="text-xl font-bold text-red-500">Rp 5.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Youtube Like (30 Days Refil)', 5000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Youtube Like (30 Days Refil)</h4><p class="text-xs text-slate-400 mb-3">(Instan Start) (Max 1M)</p><p class="text-xl font-bold text-red-500">Rp 500 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Youtube Like (30 Days Refil)', 500)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Youtube Like Short (No Refil)</h4><p class="text-xs text-slate-400 mb-3">(Max 1M)</p><p class="text-xl font-bold text-red-500">Rp 25.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Youtube Like Short (No Refil)', 25000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Youtube Like Short (No Refil)</h4><p class="text-xs text-slate-400 mb-3">(Max 1M)</p><p class="text-xl font-bold text-red-500">Rp 2.500 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Youtube Like Short (No Refil)', 2500)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Youtube Like Short (30 Days Refil)</h4><p class="text-xs text-slate-400 mb-3">(Max 1M)</p><p class="text-xl font-bold text-red-500">Rp 30.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Youtube Like Short (30 Days Refil)', 30000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Youtube Like Short (30 Days Refil)</h4><p class="text-xs text-slate-400 mb-3">(Max 1M)</p><p class="text-xl font-bold text-red-500">Rp 3.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Youtube Like Short (30 Days Refil)', 3000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Youtube Subscribers No Refil</h4><p class="text-xs text-slate-400 mb-3">(MAX 100K) (High Drop Probability)</p><p class="text-xl font-bold text-red-500">Rp 25.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Youtube Subscribers No Refil', 25000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Youtube Subscribers No Refil</h4><p class="text-xs text-slate-400 mb-3">(MAX 100K) (High Drop Probability)</p><p class="text-xl font-bold text-red-500">Rp 2.500 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Youtube Subscribers No Refil', 2500)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Youtube Subscribers 30 Days Refil</h4><p class="text-xs text-slate-400 mb-3">(MAX 10K) (100-200/days)</p><p class="text-xl font-bold text-red-500">Rp 64.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Youtube Subscribers 30 Days Refil', 64000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Youtube Subscribers 30 Days Refil</h4><p class="text-xs text-slate-400 mb-3">(MAX 10K) (100 - 200/days)</p><p class="text-xl font-bold text-red-500">Rp 6.500 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Youtube Subscribers 30 Days Refil', 6500)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Youtube View</h4><p class="text-xs text-slate-400 mb-3">(99,9% Non Drop) (Direct+overdelivery) (max 25k/dats)</p><p class="text-xl font-bold text-red-500">Rp 40.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Youtube View', 40000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Youtube View</h4><p class="text-xs text-slate-400 mb-3">(99,9% Non Drop)(Direct+overdelivery)(max 25k/dats)</p><p class="text-xl font-bold text-red-500">Rp 4.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Youtube View', 4000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Youtube View Jam Tayang (15 min video)</h4><p class="text-xs text-slate-400 mb-3">(Speed 100/Hours) (30 days refil)</p><p class="text-xl font-bold text-red-500">Rp 370.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Youtube View Jam Tayang (15 min)', 370000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Youtube View Jam Tayang (15 min video)</h4><p class="text-xs text-slate-400 mb-3">(Speed 100/Hours) (30 days refil)</p><p class="text-xl font-bold text-red-500">Rp 37.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Youtube View Jam Tayang (15 min)', 37000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Youtube View Jam Tayang (30 min video)</h4><p class="text-xs text-slate-400 mb-3">(Speed 100/Hours) (30 days refil)</p><p class="text-xl font-bold text-red-500">Rp 480.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Youtube View Jam Tayang (30 min)', 480000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Youtube View Jam Tayang (30 min video)</h4><p class="text-xs text-slate-400 mb-3">(Speed 100/Hours) (30 days refil)</p><p class="text-xl font-bold text-red-500">Rp 48.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Youtube View Jam Tayang (30 min)', 48000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Youtube View Jam Tayang (60 min video)</h4><p class="text-xs text-slate-400 mb-3">(Speed 100/Hours) (30 days refil)</p><p class="text-xl font-bold text-red-500">Rp 1.300.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Youtube View Jam Tayang (60 min)', 1300000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Youtube View Jam Tayang (60 min video)</h4><p class="text-xs text-slate-400 mb-3">(Speed 100/Hours) (30 days refil)</p><p class="text-xl font-bold text-red-500">Rp 130.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Youtube View Jam Tayang (60 min)', 130000)" class="w-full text-center mt-4 bg-slate-800 text-red-400 font-semibold py-2 rounded-lg hover:bg-red-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                 </div>
             </div>
 
-            <!-- LAYANAN FACEBOOK (LENGKAP) -->
             <div class="mb-16">
                 <h3 class="text-2xl font-bold mb-6 text-indigo-500">Layanan Facebook</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Facebook Followers Profile</h4><p class="text-xs text-slate-400 mb-3">(No Refil) (100k/Days)</p><p class="text-xl font-bold text-indigo-500">Rp 19.500 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Facebook Followers Profile', 19500)" class="w-full text-center mt-4 bg-slate-800 text-indigo-400 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Facebook Followers Profile</h4><p class="text-xs text-slate-400 mb-3">(No Refil) (100k/Days)</p><p class="text-xl font-bold text-indigo-500">Rp 2.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Facebook Followers Profile', 2000)" class="w-full text-center mt-4 bg-slate-800 text-indigo-400 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Facebook Followers Profile (30 Days Refil)</h4><p class="text-xs text-slate-400 mb-3">(100k/Days)</p><p class="text-xl font-bold text-indigo-500">Rp 26.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Facebook Followers Profile (Refil)', 26000)" class="w-full text-center mt-4 bg-slate-800 text-indigo-400 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Facebook Followers Profile (30 Days Refil)</h4><p class="text-xs text-slate-400 mb-3">(100k/Days)</p><p class="text-xl font-bold text-indigo-500">Rp 2.600 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Facebook Followers Profile (Refil)', 2600)" class="w-full text-center mt-4 bg-slate-800 text-indigo-400 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Facebook Group Member</h4><p class="text-xs text-slate-400 mb-3">(MAX 10K) (NO REFIL)</p><p class="text-xl font-bold text-indigo-500">Rp 19.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Facebook Group Member', 19000)" class="w-full text-center mt-4 bg-slate-800 text-indigo-400 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Facebook Group Member</h4><p class="text-xs text-slate-400 mb-3">(MAX 10K) (NO REFIL)</p><p class="text-xl font-bold text-indigo-500">Rp 2.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Facebook Group Member', 2000)" class="w-full text-center mt-4 bg-slate-800 text-indigo-400 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Facebook Post Like</h4><p class="text-xs text-slate-400 mb-3">(no refil) (Real Profil)</p><p class="text-xl font-bold text-indigo-500">Rp 19.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Facebook Post Like', 19000)" class="w-full text-center mt-4 bg-slate-800 text-indigo-400 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Facebook Post Like</h4><p class="text-xs text-slate-400 mb-3">(no refil) (Real Profil)</p><p class="text-xl font-bold text-indigo-500">Rp 2.000 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Facebook Post Like', 2000)" class="w-full text-center mt-4 bg-slate-800 text-indigo-400 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Facebook Post Like (30 days refil)</h4><p class="text-xs text-slate-400 mb-3">(Real Profil)</p><p class="text-xl font-bold text-indigo-500">Rp 23.000 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Facebook Post Like (Refil)', 23000)" class="w-full text-center mt-4 bg-slate-800 text-indigo-400 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Facebook Post Like (30 days refil)</h4><p class="text-xs text-slate-400 mb-3">(Real Profil)</p><p class="text-xl font-bold text-indigo-500">Rp 2.400 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Facebook Post Like (Refil)', 2400)" class="w-full text-center mt-4 bg-slate-800 text-indigo-400 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                     <div class="bg-slate-900 p-4 rounded-lg border border-slate-800 flex flex-col justify-between">
-                        <div><h4 class="font-semibold text-white">Facebook Post Share (30 days refil)</h4><p class="text-xs text-slate-400 mb-3">&nbsp;</p><p class="text-xl font-bold text-indigo-500">Rp 800 <span class="text-sm font-normal text-slate-400">/1k</span></p></div>
-                        <button onclick="addToCart('Facebook Post Share', 800)" class="w-full text-center mt-4 bg-slate-800 text-indigo-400 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
+                        <div><h4 class="font-semibold text-white">Facebook Post Share (30 days refil)</h4><p class="text-xs text-slate-400 mb-3"></p><p class="text-xl font-bold text-indigo-500">Rp 100 <span class="text-sm font-normal text-slate-400">/100</span></p></div>
+                        <button onclick="addToCart('Facebook Post Share', 100)" class="w-full text-center mt-4 bg-slate-800 text-indigo-400 font-semibold py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors text-sm">Tambah Keranjang</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ -->
         <section id="faq" class="max-w-3xl mx-auto my-16 md:my-24">
             <h2 class="text-2xl font-bold text-center mb-8 text-white">Pertanyaan Umum</h2>
             <div class="space-y-4">
@@ -381,7 +372,6 @@ BRI   : 0149 0108 0052 508 /Didik Fajar
             </div>
         </section>
 
-        <!-- Call to Action (Tombol WhatsApp Bawah) -->
         <section class="text-center bg-blue-900/20 p-8 sm:p-10 rounded-xl border border-blue-800">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Ada Pertanyaan Lain?</h2>
             <p class="text-slate-400 mb-8 max-w-xl mx-auto">Jika Anda butuh bantuan atau ingin bertanya langsung, jangan ragu untuk menghubungi admin kami.</p>
@@ -389,7 +379,6 @@ BRI   : 0149 0108 0052 508 /Didik Fajar
         </section>
     </div>
 
-    <!-- Footer -->
     <footer class="border-t border-slate-800 mt-16 md:mt-20 py-8">
         <div class="container mx-auto text-center text-slate-500 text-sm">
             <p>Hubungi Kami di TikTok: <a href="https://tiktok.com/@didikfjr" target="_blank" class="font-semibold text-blue-500 hover:text-blue-400">@didikfjr</a></p>
@@ -397,18 +386,12 @@ BRI   : 0149 0108 0052 508 /Didik Fajar
         </div>
     </footer>
 
-    <!-- SISTEM MODAL/POP-UP UNTUK KERANJANG & CHECKOUT -->
     <div id="modal-container" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden p-4">
         <div id="modal-content" class="bg-slate-900 p-6 rounded-lg w-full max-w-md max-h-[90vh] flex flex-col border border-slate-700">
-            <!-- Konten modal akan diisi oleh JavaScript -->
-        </div>
+            </div>
     </div>
     
-    <!-- JAVASCRIPT UNTUK KERANJANG POP-UP -->
     <script>
-        // =================================================================
-        // PENTING! GANTI URL DI BAWAH INI
-        // =================================================================
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbztY3zPwtZ_YdFyvvEWGeF9pBTTz6-V6s4vQheLjNk2qoPWs_pjNg3ftVFnNszW5CiDDQ/exec';
         
         let cart = [];
@@ -418,20 +401,16 @@ BRI   : 0149 0108 0052 508 /Didik Fajar
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
-        // Fungsi untuk toggle menu mobile
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
         function addToCart(name, price) {
             const existingItem = cart.find(item => item.name === name);
-            if (existingItem) {
-                existingItem.quantity++;
-            } else {
-                cart.push({ name, price, quantity: 1 });
-            }
+            if (existingItem) { existingItem.quantity++; } 
+            else { cart.push({ name, price, quantity: 1 }); }
             updateCartCount();
-            showNotification(`${name} telah ditambahkan ke keranjang.`);
+            showNotification(`${name} telah ditambahkan.`);
         }
         
         function updateCartCount() {
@@ -441,162 +420,76 @@ BRI   : 0149 0108 0052 508 /Didik Fajar
         function showNotification(message) {
             const oldNotif = document.getElementById('cart-notification');
             if(oldNotif) oldNotif.remove();
-
             const notif = document.createElement('div');
             notif.id = 'cart-notification';
             notif.className = 'fixed bottom-5 right-5 bg-blue-600 text-white py-2 px-4 rounded-lg shadow-lg z-50';
             notif.innerText = message;
             document.body.appendChild(notif);
-            setTimeout(() => {
-                notif.remove();
-            }, 3000);
+            setTimeout(() => { notif.remove(); }, 3000);
         }
         
         function copyToClipboard(elementId) {
-            const textToCopy = document.getElementById(elementId).innerText;
-            navigator.clipboard.writeText(textToCopy).then(() => {
-                showNotification('Format pesanan disalin!');
-            }).catch(err => {
-                console.error('Gagal menyalin teks: ', err);
-                alert('Gagal menyalin teks.');
-            });
+            navigator.clipboard.writeText(document.getElementById(elementId).innerText)
+                .then(() => showNotification('Format pesanan disalin!'))
+                .catch(err => console.error('Gagal menyalin teks: ', err));
         }
 
         function showCartModal() {
             let content = `<h2 class="text-xl font-bold text-white mb-4">Keranjang Belanja</h2>`;
             content += `<div class="flex-grow overflow-y-auto pr-2" style="max-height: 40vh;">`;
-            
-            if (cart.length === 0) {
-                content += '<p class="text-slate-400">Keranjang Anda kosong.</p>';
-            } else {
+            if (cart.length === 0) { content += '<p class="text-slate-400">Keranjang Anda kosong.</p>'; } 
+            else {
                 cart.forEach((item, index) => {
-                    content += `
-                        <div class="flex justify-between items-center mb-3">
-                            <div>
-                                <p class="font-semibold text-white text-sm">${item.name}</p>
-                                <p class="text-xs text-slate-400">Rp ${item.price.toLocaleString('id-ID')} x ${item.quantity}</p>
-                            </div>
-                            <button onclick="removeFromCart(${index})" class="text-red-400 hover:text-red-500 font-bold text-2xl">&times;</button>
-                        </div>
-                    `;
+                    content += `<div class="flex justify-between items-center mb-3"><div><p class="font-semibold text-white text-sm">${item.name}</p><p class="text-xs text-slate-400">Rp ${item.price.toLocaleString('id-ID')} x ${item.quantity}</p></div><button onclick="removeFromCart(${index})" class="text-red-400 hover:text-red-500 font-bold text-2xl">&times;</button></div>`;
                 });
             }
             content += `</div>`;
-            
             const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            
-            content += `
-                <div class="border-t border-slate-700 pt-4 mt-4">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-base font-semibold text-white">Total:</span>
-                        <span class="text-lg font-bold text-blue-500">Rp ${total.toLocaleString('id-ID')}</span>
-                    </div>
-                    <div class="flex justify-end space-x-3">
-                        <button onclick="closeModal()" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm">Tutup</button>
-                        <button onclick="showCheckoutForm()" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-sm ${cart.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}" ${cart.length === 0 ? 'disabled' : ''}>Checkout</button>
-                    </div>
-                </div>
-            `;
-            
+            content += `<div class="border-t border-slate-700 pt-4 mt-4"><div class="flex justify-between items-center mb-4"><span class="text-base font-semibold text-white">Total:</span><span class="text-lg font-bold text-blue-500">Rp ${total.toLocaleString('id-ID')}</span></div><div class="flex justify-end space-x-3"><button onclick="closeModal()" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm">Tutup</button><button onclick="showCheckoutForm()" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-sm ${cart.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}" ${cart.length === 0 ? 'disabled' : ''}>Checkout</button></div></div>`;
             modalContent.innerHTML = content;
             modalContainer.classList.remove('hidden');
         }
 
         function removeFromCart(index) {
             cart[index].quantity--;
-            if (cart[index].quantity <= 0) {
-                cart.splice(index, 1);
-            }
+            if (cart[index].quantity <= 0) { cart.splice(index, 1); }
             updateCartCount();
             showCartModal();
         }
 
         function showCheckoutForm() {
-            const content = `
-                <h2 class="text-xl font-bold text-white mb-4">Formulir Pemesanan</h2>
-                <form id="checkout-form">
-                    <div class="mb-4">
-                        <label for="nama" class="block text-sm font-medium text-slate-300 mb-1">Nama Lengkap</label>
-                        <input type="text" id="nama" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-sm font-medium text-slate-300 mb-1">Alamat Email</label>
-                        <input type="email" id="email" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white" required>
-                    </div>
-                    <div class="mb-4">
-                        <label for="no_wa" class="block text-sm font-medium text-slate-300 mb-1">Nomor WhatsApp (Contoh: 62812...)</label>
-                        <input type="tel" id="no_wa" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white" required>
-                    </div>
-                    <div class="flex justify-end space-x-3 mt-6">
-                        <button type="button" onclick="showCartModal()" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm">Kembali</button>
-                        <button type="submit" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-sm">
-                            <span id="submit-text">Kirim Pesanan</span>
-                            <span id="loading-spinner" class="hidden">Mengirim...</span>
-                        </button>
-                    </div>
-                </form>
-            `;
-            modalContent.innerHTML = content;
+            modalContent.innerHTML = `<h2 class="text-xl font-bold text-white mb-4">Formulir Pemesanan</h2><form id="checkout-form"><div class="mb-4"><label for="nama" class="block text-sm font-medium text-slate-300 mb-1">Nama Lengkap</label><input type="text" id="nama" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white" required></div><div class="mb-4"><label for="email" class="block text-sm font-medium text-slate-300 mb-1">Alamat Email</label><input type="email" id="email" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white" required></div><div class="mb-4"><label for="no_wa" class="block text-sm font-medium text-slate-300 mb-1">Nomor WhatsApp (Contoh: 62812...)</label><input type="tel" id="no_wa" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-white" required></div><div class="flex justify-end space-x-3 mt-6"><button type="button" onclick="showCartModal()" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-sm">Kembali</button><button type="submit" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-sm"><span id="submit-text">Kirim Pesanan</span><span id="loading-spinner" class="hidden">Mengirim...</span></button></div></form>`;
             document.getElementById('checkout-form').addEventListener('submit', handleFormSubmit);
         }
 
         function handleFormSubmit(e) {
             e.preventDefault();
             const submitBtn = e.target.querySelector('button[type="submit"]');
-            const submitText = document.getElementById('submit-text');
-            const loadingSpinner = document.getElementById('loading-spinner');
-
-            submitText.classList.add('hidden');
-            loadingSpinner.classList.remove('hidden');
             submitBtn.disabled = true;
-
+            submitBtn.innerHTML = `<span>Mengirim...</span>`;
             const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
             const pesanan = cart.map(item => `${item.name} (Qty: ${item.quantity})`).join('\n');
-
-            const dataToSend = {
-                nama: document.getElementById('nama').value,
-                email: document.getElementById('email').value,
-                no_wa: document.getElementById('no_wa').value,
-                pesanan: pesanan,
-                total: total
-            };
-
+            const dataToSend = {nama: document.getElementById('nama').value, email: document.getElementById('email').value, no_wa: document.getElementById('no_wa').value, pesanan: pesanan, total: total};
             fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(dataToSend), mode: 'no-cors' })
                 .then(() => {
-                    const now = new Date();
-                    const timezone = "Asia/Jakarta";
+                    const now = new Date(); const timezone = "Asia/Jakarta";
                     const year = new Date(now.toLocaleString('en-US', { timeZone: timezone })).getFullYear().toString().slice(-2);
                     const month = (new Date(now.toLocaleString('en-US', { timeZone: timezone })).getMonth() + 1).toString().padStart(2, '0');
                     const day = new Date(now.toLocaleString('en-US', { timeZone: timezone })).getDate().toString().padStart(2, '0');
                     const hours = new Date(now.toLocaleString('en-US', { timeZone: timezone })).getHours().toString().padStart(2, '0');
                     const minutes = new Date(now.toLocaleString('en-US', { timeZone: timezone })).getMinutes().toString().padStart(2, '0');
                     const mockOrderId = `SM-${year}-${month}-${day}-${hours}-${minutes}`;
-                    
                     showSuccessMessage(mockOrderId);
-                    cart = [];
-                    updateCartCount();
+                    cart = []; updateCartCount();
                 })
                 .catch(error => {
                     alert('Gagal mengirim pesanan. Silakan coba lagi.');
-                    console.error('Error:', error);
-                })
-                .finally(() => {
-                    submitText.classList.remove('hidden');
-                    loadingSpinner.classList.add('hidden');
-                    submitBtn.disabled = false;
+                    submitBtn.disabled = false; submitBtn.innerHTML = `<span>Kirim Pesanan</span>`;
                 });
         }
         
         function showSuccessMessage(orderId) {
-            const content = `
-                <div class="text-center">
-                    <h2 class="text-xl font-bold text-green-400 mb-4">Pesanan Terkirim!</h2>
-                    <p class="text-slate-300 mb-2">Nomor referensi Anda: <strong class="text-white">${orderId}</strong>.</p>
-                    <p class="text-slate-300 mb-6">Konfirmasi resmi akan dikirim ke email Anda.</p>
-                    <button onclick="closeModal()" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg">Tutup</button>
-                </div>
-            `;
-            modalContent.innerHTML = content;
+            modalContent.innerHTML = `<div class="text-center"><h2 class="text-xl font-bold text-green-400 mb-4">Pesanan Terkirim!</h2><p class="text-slate-300 mb-2">Nomor referensi Anda: <strong class="text-white">${orderId}</strong>.</p><p class="text-slate-300 mb-6">Konfirmasi resmi akan dikirim ke email Anda.</p><button onclick="closeModal()" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg">Tutup</button></div>`;
         }
 
         function closeModal() {
